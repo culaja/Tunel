@@ -18,7 +18,7 @@ namespace Server
             _token = token;
         }
 
-        public async Task ProcessAsync(
+        public async Task ProcessReceivedAsync(
             Action<ArraySegment<byte>, WebSocketReceiveResult> onMessageReceived)
         {
             var  receiveBuffer = new ArraySegment<byte>(new byte[1024]);

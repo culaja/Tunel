@@ -19,7 +19,7 @@ namespace Server
                 Task.Run(async () =>
                 {
                     var processor = new WebSocketConnectionProcessor(webSocket, cancellationTokenSource.Token);
-                    await processor.ProcessAsync(
+                    await processor.ProcessReceivedAsync(
                         (m, r) =>
                         {
                             Console.WriteLine($"Received bytes: {r.Count}");
